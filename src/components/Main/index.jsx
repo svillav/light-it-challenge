@@ -5,7 +5,7 @@ import Button from "../Button";
 
 const Main = () => {
   return (
-    <div className="relative w-full h-screen bg-gray-300">
+    <div className="relative w-full h-full bg-gray-300">
       <div className="absolute right-5 top-5">
         <Button label={"Fijar"} />
         <Button label={"Borrar"}  />

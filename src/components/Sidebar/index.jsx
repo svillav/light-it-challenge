@@ -9,7 +9,7 @@ const sections = [
   {
     name: "aberturas",
     label: "Aberturas",
-    img: Aberturas  
+    img: Aberturas
   },
   {
     name: "equipamiento",
@@ -38,47 +38,45 @@ const Sidebar = () => {
   }
 
   return (
-    <>
-      <div class="flex justify-center items-center w-22 h-full shadow-md bg-white px-1 relative z-40">
-        <ul class="w-20 h-60">
-          {
-            sections.map((section, index) => {
+    <div class="relative h-full flex justify-center items-center w-22 shadow-md bg-white px-1 z-40">
+      <ul class="w-20 h-60">
+        {
+          sections.map((section, index) => {
 
-              const handleClick = (title) => {
-                handleData(title)
-                setOpen(true)
-                setTitle(section.label)
-                setProducts(false)
-              }
+            const handleClick = (title) => {
+              handleData(title)
+              setOpen(true)
+              setTitle(section.label)
+              setProducts(false)
+            }
 
-              return (
-                <div>
-                  <li className="h-20 justify-center cursor-pointer" key={index}>
-                    <div
-                      className="flex flex-col items-center text-xs p-5 text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
-                      data-mdb-ripple="true"
-                      data-mdb-ripple-color="dark"
-                      onClick={() => handleClick(section.name)}
-                    >
-                      <img className='h-100' src={section.img} alt="" />
-                      <span>{section.label}</span>
-                    </div>
-                  </li>
-                </div>
-              )
-            })
-          }
-        </ul>
-        {isOpen ?
-          <Menu
-            title={title}
-            openProducts={openProducts}
-            setProducts={setProducts}
-            setOpen={setOpen}
-            data={data}
-          /> : null}
-      </div>
-    </>
+            return (
+              <div>
+                <li className="h-20 justify-center cursor-pointer" key={index}>
+                  <div
+                    className="flex flex-col items-center text-xs p-5 text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
+                    data-mdb-ripple="true"
+                    data-mdb-ripple-color="dark"
+                    onClick={() => handleClick(section.name)}
+                  >
+                    <img className='h-100' src={section.img} alt="" />
+                    <span>{section.label}</span>
+                  </div>
+                </li>
+              </div>
+            )
+          })
+        }
+      </ul>
+      {isOpen ?
+        <Menu
+          title={title}
+          openProducts={openProducts}
+          setProducts={setProducts}
+          setOpen={setOpen}
+          data={data}
+        /> : null}
+    </div>
   )
 }
 
