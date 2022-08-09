@@ -35,9 +35,9 @@ const Menu = (props) => {
             return (
               <li
                 onClick={() => handleClick(data)} 
-                className="font-xs flex flex-row justify-between items-center p-1 bg-white my-1.5 rounded-lg cursor-pointer">
-                <span className="font-xs px-2">{data.name}</span>
-                <img className="h-5 w-4 rotate-180" src={activo} />
+                className="flex flex-row justify-between items-center p-2 bg-white my-1.5 rounded-lg cursor-pointer">
+                <span className="text-sm px-2">{data.name}</span>
+                <img className="h-4 w-3 rotate-180" src={activo} />
               </li>
             )
           })
