@@ -9,10 +9,10 @@ function classNames(...classes) {
 const Dropdown = () => {
   return (
     <Menu as="div" className="relative inline-block text-left">
-      <div>
-        <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-200 shadow-sm px-4 py-2 bg-white text-sm font-normal text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
-          Guardar y salir
-          <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
+      <div className="text-lg">
+        <Menu.Button className="inline-flex justify-center items-center w-full rounded-md border border-gray-200 shadow-sm h-9 px-4 bg-white text-sm font-normal text-gray-700 divide-x hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
+          <span>Guardar y salir</span>
+          <ChevronDownIcon  className="-mr-1 ml-2 pl-2 h-5" aria-hidden="true" />
         </Menu.Button>
       </div>
 
