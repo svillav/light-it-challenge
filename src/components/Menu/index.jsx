@@ -27,8 +27,8 @@ const Menu = (props) => {
   }
 
   return (
-    <div style={menuStyle.container} className="absolute p-4 h-full w-96 left-20 bg-neutral-100">
-      <span className="font-bold font-sans text-neutral-500">{title}</span>
+    <div style={menuStyle.container} className="absolute p-4 h-full w-96 left-20 bg-neutral-100 font-sans">
+      <span className="font-bold text-neutral-500">{title}</span>
       <ul>
         {
           data.map((data) => {
