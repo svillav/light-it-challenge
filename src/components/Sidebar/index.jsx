@@ -23,8 +23,7 @@ const sections = [
   }
 ]
 
-const Sidebar = () => {
-  const [isOpen, setOpen] = useState(false)
+const Sidebar = ({isOpen, setOpen}) => {
   const [title, setTitle] = useState('')
   const [openProducts, setProducts] = useState(false);
   const [data, setData] = useState();
