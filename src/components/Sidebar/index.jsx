@@ -37,7 +37,7 @@ const Sidebar = ({isOpen, setOpen}) => {
   }
 
   return (
-    <div class="relative h-full flex justify-center items-center w-22 shadow-md bg-white px-1 z-40">
+    <div class="relative h-full flex justify-center items-center w-22 shadow-md bg-white z-40">
       <ul class="w-20 h-60">
         {
           sections.map((section, index) => {
@@ -51,16 +51,21 @@ const Sidebar = ({isOpen, setOpen}) => {
 
             return (
               <div>
-                <li className="h-20 justify-center cursor-pointer" key={index}>
-                  <div
-                    className="flex flex-col items-center text-xs p-5 text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
+                <li className="flex flex-col justify-center align-items hover:bg-gray-100 cursor-pointer" key={index}>
+                  <button
+                    className="before:content-[''] before:h-5 before:w-full before:bg-white before:h-full before:rounded-br-full
+                      after:content-[''] after:h-5 after:bg-white after:w-full after:h-full after:rounded-tr-full
+                      flex flex-col justify-center items-center text-xs text-gray-700 text-ellipsis whitespace-nowrap rounded 
+                      hover:text-gray-900 active:bg-gray-100 focus:bg-gray-100 transition duration-300 ease-in-out"
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="dark"
                     onClick={() => handleClick(section.name)}
                   >
-                    <img className='h-100' src={section.img} alt="" />
-                    <span>{section.label}</span>
-                  </div>
+                    <div className="flex flex-col w-full items-center py-2 hover:bg-gray-100">
+                      <img className='w-7' src={section.img} alt="" />
+                      <span>{section.label}</span>
+                    </div>
+                  </button>
                 </li>
               </div>
             )

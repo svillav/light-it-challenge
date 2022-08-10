@@ -10,7 +10,7 @@ const menuStyle = {
     left: "470px"
   },
   container: {
-    left: "85px",
+    left: "80px",
     width: "470px"
   }
 }
